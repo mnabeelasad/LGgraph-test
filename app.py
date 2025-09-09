@@ -4,6 +4,7 @@ from langchain_community.document_loaders import PyPDFLoader
 
 loader = PyPDFLoader(r"F:\projects for job\branching test\Psychophysiology 8.2 Electrocortical measures.pdf")
 
+model = ChatOpenAI
 data = loader.load()
 
 splitter = RecursiveCharacterTextSplitter(
@@ -15,3 +16,4 @@ chunks = splitter.split_documents(data)
 
 print(chunks[0].page_content)
 print(len(chunks))
+
