@@ -14,3 +14,4 @@ splitter = RecursiveCharacterTextSplitter(
 chunks = splitter.split_documents(data)
 
 print(chunks[0].page_content)
+print(len(chunks))
